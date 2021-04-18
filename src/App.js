@@ -3,8 +3,9 @@ import axios from "axios";
 
 const App = () => {
   const [number, setNumber] = useState(23);
+  const [users, setUsers] = useState([]);
   const fetchUsers = async () =>
-    console.log(
+    setUsers(
       await axios.get("https://randomuser.me/api/?page=3&results=10&seed=abc")
     );
   console.log("Render of App component");
